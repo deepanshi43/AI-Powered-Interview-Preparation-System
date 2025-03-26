@@ -16,6 +16,7 @@ body{
     background-color:white;
     color:#050536;
     height: 70px;
+    
 }
 .nav-listItems{
     display:flex;
@@ -38,4 +39,15 @@ font-weight:bold;
 }
 .card-container{
     display:flex;
+}
+.header-container img{
+    margin-top: 50px;
+    height: 150px;
+    width: 200px;
+    border-radius: 30%;
+}
+.sub-header{
+    margin: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
 }
