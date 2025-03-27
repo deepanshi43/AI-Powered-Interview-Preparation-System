@@ -46,7 +46,7 @@ font-weight:bold;
     width: 200px;
     border-radius: 30%;
 }
-.policies-container{
+.cont-container{
     width:100%;
     display:flex;
     padding:12rem;
@@ -54,28 +54,28 @@ font-weight:bold;
     align-items: center;
 }
 
-.policies-left-container img{
+.cont-left-container img{
     height: 400px;
     width:350px;
     margin-right: 3.5rem;
     border-radius: 20px;
 }
 
-.policies-left-container img{
+.cont-left-container img{
     box-shadow: 0px 4px 10px rgba(87, 81, 81, 0.2); /* Adds a soft shadow */
    
     transition: box-shadow 0.3s ease-in-out; /* Smooth shadow effect */
 }
 
-.policies-left-container img:hover
+.cont-left-container img:hover
  {
-    box-shadow: 0px 8px 20px rgba(82, 126, 190, 0.5); /* Blue glowing effect */
+    box-shadow: 0px 8px 20px rgba(95, 134, 192, 0.5); /* Blue glowing effect */
 }
-.policies-right-container h2{
+.cont-right-container h2{
     font-size: 1.9rem;
     padding-bottom: 1.3rem;
 }
-#heading-of-policy:hover{
+#heading-of-cont:hover{
         cursor: pointer;
         transform: scale(1.1); 
         transition: transform 0.8s ease-in-out; 
@@ -85,12 +85,12 @@ font-weight:bold;
                 -2px -2px 5px lightgray; /* Additional soft shadow */
         }
     
-.policies-right-container p{
+.cont-right-container p{
     font-weight: 400;
     padding-bottom: 1.3rem;
 
 }
-.policies-email{
+.cont-email{
     display: flex;
     column-gap: 0.8rem;
     
@@ -100,12 +100,12 @@ font-weight:bold;
    height: 50px;
    width: 50px;
 }
-.policies-email a{
+.cont-email a{
     text-decoration: none;
     
 }
 
-.policies-contact{
+.cont-contact{
     display: flex;
     /* column-gap: 0.8rem; */
     
@@ -116,7 +116,7 @@ font-weight:bold;
    width: 100px;
    padding-right: 2rem;
 }
-.policies-contact a{
+.cont-contact a{
     text-decoration: none;
     
 }

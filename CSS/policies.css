@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.5;
+}
+.header-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    color:#050536;
+    height: 70px;
+    
+}
+.nav-listItems{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.nav-listItems li{
+    list-style: none;
+    margin: 20px;
+}
+.nav-listItems li a{
+text-decoration:none;
+font-size:large;
+color:black;
+font-weight:bold;
+}
+.nav-listItems li a:hover{
+    text-decoration: underline;
+}
+.card-container{
+    display:flex;
+}
+.header-container img{
+    margin-top: 50px;
+    height: 150px;
+    width: 200px;
+    border-radius: 30%;
+}
+
+/* Privacy Section */
+.privacy-section {
+    width:95%;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px auto 0 auto;
+}
+
+.privacy-heading {
+    color: #0044cc;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.privacy-heading:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px rgba(0, 68, 204, 0.5);
+}
+
+.privacy-text {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Image Styling */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.policy-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Policy Details */
+.policy-details {
+    margin-top: 20px;
+}
+
+.policy-card {
+    background: #e3f2fd;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #0044cc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.policy-title span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0044cc;
+}
+
+.policy-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Footer */
+/* .footer {
+    margin-top: 30px;
+    text-align: center;
+    padding: 15px;
+    background: #0044cc;
+    color: white;
+    border-radius: 10px;
+}
+
+.footer-links .footer-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links .footer-link:hover {
+    color: #ffcc00;
+}
+
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+} */
