@@ -1,0 +1,122 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.5;
+}
+.header-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    color:#050536;
+    height: 70px;
+    
+}
+.nav-listItems{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.nav-listItems li{
+    list-style: none;
+    margin: 20px;
+}
+.nav-listItems li a{
+text-decoration:none;
+font-size:large;
+color:black;
+font-weight:bold;
+}
+.nav-listItems li a:hover{
+    text-decoration: underline;
+}
+.card-container{
+    display:flex;
+}
+.header-container img{
+    margin-top: 50px;
+    height: 150px;
+    width: 200px;
+    border-radius: 30%;
+}
+.policies-container{
+    width:100%;
+    display:flex;
+    padding:12rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.policies-left-container img{
+    height: 400px;
+    width:350px;
+    margin-right: 3.5rem;
+    border-radius: 20px;
+}
+
+.policies-left-container img{
+    box-shadow: 0px 4px 10px rgba(87, 81, 81, 0.2); /* Adds a soft shadow */
+   
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow effect */
+}
+
+.policies-left-container img:hover
+ {
+    box-shadow: 0px 8px 20px rgba(82, 126, 190, 0.5); /* Blue glowing effect */
+}
+.policies-right-container h2{
+    font-size: 1.9rem;
+    padding-bottom: 1.3rem;
+}
+#heading-of-policy:hover{
+        cursor: pointer;
+        transform: scale(1.1); 
+        transition: transform 0.8s ease-in-out; 
+        
+            text-shadow: 
+                2px 2px 5px gray,   /* Main shadow */
+                -2px -2px 5px lightgray; /* Additional soft shadow */
+        }
+    
+.policies-right-container p{
+    font-weight: 400;
+    padding-bottom: 1.3rem;
+
+}
+.policies-email{
+    display: flex;
+    column-gap: 0.8rem;
+    
+    align-items: center;
+}
+ .email img{
+   height: 50px;
+   width: 50px;
+}
+.policies-email a{
+    text-decoration: none;
+    
+}
+
+.policies-contact{
+    display: flex;
+    /* column-gap: 0.8rem; */
+    
+    align-items: center;
+}
+.contactNo img{
+   height: 100px;
+   width: 100px;
+   padding-right: 2rem;
+}
+.policies-contact a{
+    text-decoration: none;
+    
+}
