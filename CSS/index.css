@@ -1,0 +1,259 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.5;
+}
+.header-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    color:#050536;
+    height: 70px;
+    
+}
+.nav-listItems{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.nav-listItems li{
+    list-style: none;
+    margin: 20px;
+}
+.nav-listItems li a{
+text-decoration:none;
+font-size:large;
+color:black;
+font-weight:bold;
+}
+.nav-listItems li a:hover{
+    text-decoration: underline;
+}
+
+.header-container img{
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 30%;
+    
+}
+hr{
+color: blue;
+}
+.sub-header{
+    margin-top: 100px;
+    display: flex;
+    
+    h2{
+        padding-top: 100px;
+        padding-left: 15px;
+        text-align: left;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 60px;
+        animation: typewriter 6s steps(12, end) forwards, blink 0.8s  steps(2, start)  infinite;
+    }
+    p{
+      padding-top: 20px;
+      font-family: cursive;  
+      padding-left: 140px;
+      font-size:25px ;
+      
+    }
+    img{
+        margin-left: 40px;
+        padding-left: 60px;
+        height: 350px;
+        width: 400px;
+        box-shadow: 2px 2px blue;
+        border-radius: 10%;
+       
+    }
+    
+    button{
+        margin-top: 40px;
+        height: 40px;
+        width: 250px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 25px;
+        background-color: rgb(78, 173, 229);
+        border-radius: 20px;
+
+        
+    }
+}
+.start-button{
+    margin-left: 30%;
+}
+.card-container{
+    margin-top: 210px;
+    display:flex;
+    justify-content: space-between;
+    
+}
+.quiz-card,.resumeAnalyzer-card,.mockInterview-card{
+    margin: 20px;
+    width: 30%;
+    padding: 20px;
+    background:rgb(206, 238, 238) ;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.8);
+
+}
+
+.testimonials{
+    margin-top: 150px;
+}
+.card-container{
+    height: 550px;
+    
+    h4{
+        margin-top: 10px;
+        font-size: 24px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    p{
+        font-size: 18px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-align: start;
+    }
+    .card-heading{
+        text-align: center;
+    }
+    button{
+        margin-top: 10px;
+        width: 300px;
+        height: 30px;
+        border-radius: 15px;
+        font-size: 14px;
+        color: aliceblue;
+        background-color: rgb(119, 54, 193);
+        box-shadow: 3px 1px black;
+    }
+    .learn-button{
+        margin-top: 25px;
+        
+    }
+    .AI-button{
+        margin-top: 40px;
+    }
+    img{
+        height: 240px;
+        width: 350px;
+        border-radius: 10%;
+        box-shadow: 1.5px 2.5px black;
+    }
+    
+}
+.quiz-card:hover{
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .resumeAnalyzer-card:hover{
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .mockInterview-card:hover{
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+button:hover{
+    cursor:pointer;
+}
+
+.testimonials{
+    margin-top: 85px;
+    h4{
+        font-size: 45px;
+        font-family:cursive;
+        color: rgb(56, 43, 230);
+        font-style: italic;
+        font-weight: lighter;
+    }
+   
+
+}
+.testimonials-list{
+    margin-top: 75px;
+    display: flex;
+    
+    justify-content: space-between;
+    
+}
+.testimonial-1,.testimonial-2,.testimonial-3,.testimonial-4{
+    margin: 25px;
+    padding: 10px;
+    width: 30%;
+    border-radius: 35px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.8);
+    text-align: center;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.feedback-button{
+    margin-top: 70px;
+    float: right;
+    margin-right: 40px;
+    height: 55px;
+    width: 205px;
+    background-color: #3899ca;
+    color: aliceblue;
+    font-size: 18px;
+    box-shadow: 3px 3px rgba(0,0,0,0.9);
+}
+.feedback-button:hover{
+    cursor:pointer;
+}
+footer{
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(7, 7, 70);
+    padding: 30px;
+    bottom: 0%;
+    position: relative;
+    color: aliceblue;
+    div span a{
+
+        color: aliceblue;
+    }
+}
+
