@@ -120,3 +120,16 @@ font-weight:bold;
     text-decoration: none;
     
 }
+footer{
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(7, 7, 70);
+    padding: 30px;
+    bottom: 0%;
+    position: relative;
+    color: aliceblue;
+    div span a{
+
+        color: aliceblue;
+    }
+}

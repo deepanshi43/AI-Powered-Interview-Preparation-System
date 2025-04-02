@@ -142,3 +142,16 @@ font-weight:bold;
     margin-top: 10px;
     font-size: 14px;
 } */
+footer{
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(7, 7, 70);
+    padding: 30px;
+    bottom: 0%;
+    position: relative;
+    color: aliceblue;
+    div span a{
+
+        color: aliceblue;
+    }
+}
