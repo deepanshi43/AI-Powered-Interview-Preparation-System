@@ -19,54 +19,66 @@
                   <li><a href="loginPage.html">Login</a></li>
               </ul>
             </nav>
-            
+    </div>     
+     <hr>
+      
+      <div class="container">
+          <h3>Sign Up</h3>
+      
+          <div>
+              <button type="button" class="google-btn" onclick="window.location.href='https://google.com'">
+                  <img src="https://static.vecteezy.com/system/resources/previews/011/598/471/original/google-logo-icon-illustration-free-vector.jpg" alt="google" height="30" width="30">
+                  <span>LOGIN WITH GOOGLE</span>
+              </button>
+          </div>
+      
+          <div class="divider">
+              <hr><span>or</span><hr>
+          </div>
+      
+          <form action="/action.php" method="post">
+              <label for="FirstName">
+                  <span>First Name</span>
+                  <input type="text" name="FirstName" id="FirstName" required>
+              </label>
+      
+              <label for="LastName">
+                  <span>Last Name</span>
+                  <input type="text" name="LastName" id="LastName" required>
+              </label>
+      
+              <label for="email">
+                  <span>Email</span>
+                  <input type="email" name="email" id="email" required>
+              </label>
+      
+              <label for="password">
+                  <span>Password</span>
+                  <input type="password" name="password" id="password" required>
+              </label>
+      
+              <label for="confpass">
+                  <span>Confirm Password</span>
+                  <input type="password" name="confpass" id="confpass" required>
+              </label>
+      
+              <button type="submit">Sign Up</button>
+          </form>
+      
+          <div class="signin-link">
+              <p>Already have an account? <a href="loginPage.html">Sign In</a></p>
+          </div>
       </div>
-
-    <div>
-        <h3>Sign Up</h3>
-        <div>
-            <button type="button" onclick="google.com">
-            <img src="https://static.vecteezy.com/system/resources/previews/011/598/471/original/google-logo-icon-illustration-free-vector.jpg" alt="google" height="50" width="50">
-            <span><b>LOGIN WITH GOOGLE</b></span></button>
-        </div>
-        <br>
-        <span><hr width="600"><span>or</span><hr width="600"></span>
-    </div>
-    <div>
-        <form action="/action.php" method="post">
-            <label for="FirstName">
-            <span><b>Fisrt Name</b></span>
-            <input type="text" name="FirstName" id="FirstName" required>
-        </label>
-        <label for="LastName">
-            <span><b>Last Name</b></span>
-            <input type="text" name="LastName" id="LastName" required>
-        </label>
-        <br><br>
-        <label for="email">
-            <span><b>Email</b></span>
-            <input type="email" name="email" id="email" required >
-        </label>
-        <br><br>
-        <label for="password">
-            <span><b>Password</b></span>
-            <input type="password" name="password" id="password">
-        </label>
-        <label for="confpass">
-            <span><b>Confirm Password</b></span>
-            <input type="password" name="confpass" id="confpass">
-        </label>
-        <br><br>
-        <button type="submit">Sign Up</button>
-        </form>
-        <div>
-            <p>Already have an account? <a href="loginPage.html"><b>Sign In</b></a></p>
-        </div>
-    </div>
+      
+     
+      
     <footer>
         <div> <span><a href="aboutUs.html">About us</a></span>|<span><a href="contactUs.html">Contact us</a></span>|<span><a href="policies.html">Policies</a></span></div>
         <p>&copy; 2025 Copyright SmartEU-Prep
             All rights are reserved. </p>
     </footer>
 </body>
-</html>
+</html> 
+
+
+ 

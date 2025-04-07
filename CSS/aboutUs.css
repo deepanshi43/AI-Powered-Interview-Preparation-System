@@ -1,13 +1,14 @@
 *{
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-
 }
 body{
     background-color:white;
     font-family: Arial, Helvetica, sans-serif;
     line-height:1.5;
+    background: linear-gradient(to bottom right , rgb(167, 213, 228),white);
+   
 }
 .header-container{
     display:flex;
@@ -16,6 +17,7 @@ body{
     background-color:white;
     color:#050536;
     height: 70px;
+    
     
 }
 .nav-listItems{
@@ -42,54 +44,19 @@ font-weight:bold;
     margin-top: 100px;
     height: 200px;
     width: 200px;
-    border-radius: 30%;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+    border-color: rgb(209, 122, 16);
     
 }
-body{
-    height: 100%;
-    width:100%;
-    background-color:white;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height:1.5;
-}
-.header-container{
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color:white;
-    color:#050536;
-    height: 70px;
-    
-}
-.nav-listItems{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    
-}
-.nav-listItems li{
-    list-style: none;
-    margin: 20px;
-}
-.nav-listItems li a{
-text-decoration:none;
-font-size:large;
-color:black;
-font-weight:bold;
-}
-.nav-listItems li a:hover{
-    text-decoration: underline;
-}
-.card-container{
-    display:flex;
-}
-.header-container img{
-    margin-top: 50px;
-    height: 150px;
-    width: 200px;
-    border-radius: 30%;
-}
+
+
+
+
+
+
 .aboutUsCard-container{
+    margin-top: 60px;
     width:95%;
     display:flex;
     flex-direction: column;
@@ -117,6 +84,7 @@ flex-direction: row;
 .aboutUs-mission-card{
     height:480px;
     width:380px;
+    background-color: white;
     border: solid black 1px;
     /* margin:0.9rem; */
     border-radius: 20px;
@@ -124,6 +92,7 @@ flex-direction: row;
 }
 .aboutUs-vision-card{
     margin-left:4.8rem;
+    background-color: white;
     height:480px;
     width:380px;
     border: solid black 1px;
@@ -200,7 +169,7 @@ padding-left: 0.6rem;
     50% { border-color: transparent; }
 }
 footer{
-    margin-top: 200px;
+    margin-top: 100px;
     text-align: center;
     background-color: rgb(7, 7, 70);
     padding: 30px;
@@ -212,4 +181,3 @@ footer{
         color: aliceblue;
     }
 }
-
