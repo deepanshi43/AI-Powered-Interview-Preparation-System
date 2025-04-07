@@ -4,20 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEU-Prep</title>
+    <link rel="stylesheet" href="../CSS/resumeanalyser.css">
 </head>
 <body>
-    <div>
+    <div class="header-container">
+        <img src="../Images/SmartEU-Prep (1).png" alt="SmartEU-Prep" class="logo">
         
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="interview.html">Interviews</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="loginPage.html">Login</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div>
+          
+          <nav class="navbar">
+              <ul class="nav-listItems">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="interview.html">Interviews</a></li>
+                  <li><a href="register.html">Register</a></li>
+                  <li><a href="loginPage.html">Login</a></li>
+              </ul>
+            </nav>
+            
+      </div>
+      <hr>
+      
+    <!-- <div>
         <h3><b>Resume Analyzer</b></h3>
         
         <p>Review your resume to match your role, company, and job criteria effectively.</p>
@@ -37,6 +43,46 @@
             </div>
         </form>
     </div>
+</div> -->
+
+<div class="resume-analyzer-wrapper">
+    <div class="resume-analyzer-header">
+      <h3><b>Resume Analyzer</b></h3>
+      <p class="animated-text">
+        <span>Review your resume</span>
+        <span>to match your role,</span>
+        <span>company,</span>
+        <span>and </span>
+      <span class="highlight">job criteria</span>
+    <span class="highlight">effectively.</span>
+      </p>
+      <!-- <p>Review your resume to match your role, company, and job criteria effectively.</p> -->
+    </div>
+  
+    <div class="resume-analyzer-card">
+      <form action="analyzing.html">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resume">Resume *</label>
+            <input type="file" name="resume" id="resume" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="role">Enter Your Desired Role *</label>
+            <input type="text" name="role" id="role" placeholder="Enter your Role" required>
+          </div>
+  
+          <div class="upload-btn-wrapper">
+            <button type="submit">Analyze</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+
+
     <footer>
         <div> <span><a href="aboutUs.html">About us</a></span>|<span><a href="contactUs.html">Contact us</a></span>|<span><a href="policies.html">Policies</a></span></div>
         <p>&copy; 2025 Copyright SmartEU-Prep
