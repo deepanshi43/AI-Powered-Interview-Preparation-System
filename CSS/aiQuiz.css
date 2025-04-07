@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.5;
+    background: linear-gradient(to bottom right , skyblue,white);
+   
+}
+.header-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    color:#050536;
+    height: 70px;
+    
+    
+}
+.nav-listItems{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.nav-listItems li{
+    list-style: none;
+    margin: 20px;
+}
+.nav-listItems li a{
+text-decoration:none;
+font-size:large;
+color:black;
+font-weight:bold;
+}
+.nav-listItems li a:hover{
+    text-decoration: underline;
+}
+
+.header-container img{
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+    border-color: rgb(209, 122, 16);
+    
+}
+
+
+
+.interview-container {
+   
+    max-width: 500px;
+    margin: 150px auto;
+    padding: 30px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #2c3e50;
+    text-shadow: 1px 1px 2px #ccc;
+}
+.form-heading:hover{
+    text-decoration: underline;
+}
+.form-subtext {
+    text-align: center;
+    color:black;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.interview-form label {
+    display: block;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: 500;
+}
+
+.interview-form input[type="text"],
+.interview-form input[type="file"],
+.interview-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+}
+
+.interview-form input[type="text"]:focus,
+.interview-form input[type="file"]:focus {
+    border: 1px solid #030303;
+    outline: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0e335b;
+   
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #315378;
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(7, 7, 70);
+    padding: 30px;
+    bottom: 0%;
+    position: relative;
+    color: aliceblue;
+    div span a{
+
+        color: aliceblue;
+    }
+}
