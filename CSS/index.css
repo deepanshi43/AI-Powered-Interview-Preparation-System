@@ -8,6 +8,7 @@ body{
     background-color:white;
     font-family: Arial, Helvetica, sans-serif;
     line-height:1.5;
+   
 }
 .header-container{
     display:flex;
@@ -16,6 +17,7 @@ body{
     background-color:white;
     color:#050536;
     height: 70px;
+    
     
 }
 .nav-listItems{

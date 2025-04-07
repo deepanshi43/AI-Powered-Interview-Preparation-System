@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height:1.5;
+    background: linear-gradient(to bottom right , skyblue,white);
+   
+}
+.header-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:white;
+    color:#050536;
+    height: 70px;
+    
+    
+}
+.nav-listItems{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.nav-listItems li{
+    list-style: none;
+    margin: 20px;
+}
+.nav-listItems li a{
+text-decoration:none;
+font-size:large;
+color:black;
+font-weight:bold;
+}
+.nav-listItems li a:hover{
+    text-decoration: underline;
+}
+
+.header-container img{
+    margin-top: 100px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+    border-color: rgb(209, 122, 16);
+    
+}
+.outer-box{
+   
+  
+   height: 100vh;
+   width: 100vw;
+   
+   
+   
+}
+.inner-box{
+    width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+   
+    
+}
+.header{
+    h2{
+        margin-top: 100px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 40px;
+        padding-left: 15px;
+    }
+    p{
+        padding-left: 14px;
+        font-size: 14px;
+        color: rgb(46, 41, 41);
+    }
+}
+.form-container{
+    margin: 10px 0;
+    
+
+}
+.google-login button{
+    margin-top: 18px;
+    height: 40px;
+    width: 95%;
+    margin-left: 10px;
+    background-color: white;
+    border-color: white;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+   
+}
+.google-login span{
+    
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-decoration: dashed;
+    
+}
+.google-login img{
+    height: 32px;
+    background-color: white;
+    margin-right: 15px;
+    
+}
+.google-login button:hover{
+    cursor: pointer;
+    
+}
+.sepration span{
+    text-align: center;
+
+}
+
+
+.form-container hr{
+    display: flex;
+    margin-top: 10px;
+    width: 20%;
+}
+.form-container label{
+    margin: 15px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 19px;
+}
+.form-container input{
+    width: 90%;
+    height: 25px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.signin-button button{
+    margin-top: 20px;
+    width: 95%;
+    height: 35px;
+    margin-left: 10px;
+    border-radius: 8px;
+    background-color: rgb(7, 161, 250);
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    
+}
+.signin-button button:hover{
+    cursor: pointer;
+    background-color: #348cd8;
+}
+.forget-password{
+    margin-top: 13px;
+    float: right;
+    padding-right: 20px;
+    font-size: 15px;
+    color: black
+}
+.Page-switch{
+    margin-top:  60px ;
+    padding-bottom: 20px;
+    text-align: center;
+    
+}
+
+
+
+
+
+
+
+footer{
+    margin-top: 200px;
+    text-align: center;
+    background-color: rgb(7, 7, 70);
+    padding: 30px;
+    bottom: 0%;
+    position: relative;
+    color: aliceblue;
+    div span a{
+
+        color: aliceblue;
+    }
+}
