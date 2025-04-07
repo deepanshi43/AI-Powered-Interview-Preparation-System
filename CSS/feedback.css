@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+.header{
+    h2{
+        margin: 20px;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 50px;
+        color: rgb(47, 102, 220);
+        text-shadow: 2px 3px rgb(192, 61, 61);
+    }
+    p{
+        text-align: center;
+        font-size: 30px;
+    }
+
+}
