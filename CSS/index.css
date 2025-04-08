@@ -44,7 +44,9 @@ font-weight:bold;
     margin-top: 100px;
     height: 200px;
     width: 200px;
-    border-radius: 30%;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+    border-color: rgb(209, 122, 16);
     
 }
 hr{
