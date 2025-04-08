@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: linear-gradient(to top right, skyblue, white);
+}
 .header{
     h2{
         margin: 20px;
@@ -12,10 +15,132 @@
         color: rgb(38, 44, 230);
         text-shadow: 2px 3px rgb(193, 25, 120);
     }
-    p{
-        text-align: center;
-        font-size: 30px;
-    }
+    
     
 
 }
+.header p{
+    text-align: center;
+        font-size: 30px;
+
+}
+.inner-box{
+    background: linear-gradient(to bottom right , rgb(101, 157, 240),white);
+    text-align: center;
+    margin-top: 25px;
+    width: 75%;
+    height: 100%;
+    margin-left: 13%;
+    border-radius: 20px;
+    box-shadow: 5px 6px 30px rgba(0, 0, 0, 1.9);
+}
+h3{
+    font-size: 30px;
+   
+    margin-top: 35px;
+}
+h3:hover{
+    text-decoration: underline;
+}
+.question{
+    margin-top: 10px;
+    font-size: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+#name,#email,#age,#prof{
+    margin-right: 80px;
+    margin-left: 10px;
+    margin-top: 15px;
+    height: 25px;
+    width: 35%;
+    border-radius: 4px;
+
+}  
+.inner-box ul li {
+    font-size: 20px;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.rating{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 200px;
+    
+}
+.rating label{
+    font-size: 18px;
+    margin: 10px;
+}
+.rating label:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+    
+}
+.options{
+    display: flex;
+    
+    margin-left: 500px;
+}
+.options label{
+    font-size: 20px;
+    margin: 5px;
+    
+}
+.options label:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+    
+}
+.options-2{
+    margin: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-family: cursive;
+}
+.options-2 label:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+
+}
+
+.options-2 label[for="PF"]{
+    margin-right: 95px;
+    
+}
+.options-2 label[for="MI"]{
+    margin-right: 145px;
+    
+}
+.options-2 label[for="RA"]{
+    margin-right: 145px;
+    
+}
+.options-2 label[for="QE"]{
+    margin-right: 120px;
+    
+}
+.options-2 label[for="other"]{
+    margin-right: 65px;
+    
+}
+.options-2 label[for="AI"]{
+    margin-left: 5px;
+    
+}
+
+.options-3{
+    display: flex;
+}
+.testimonial{
+    margin-top: 20px;
+    float: left;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
