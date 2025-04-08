@@ -89,7 +89,8 @@ font-weight:bold;
 }
 
 .interview-form input[type="text"],
-.interview-form input[type="file"] {
+.interview-form input[type="file"],
+.interview-form input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -121,7 +122,7 @@ font-weight:bold;
 }
 
 .submit-btn:hover {
-    background-color: #007bff;
+    background-color: #315378;
     transform: scale(1.03);
 }
 

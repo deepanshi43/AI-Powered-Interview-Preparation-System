@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEU-Prep</title>
-    <link rel="stylesheet" href="../CSS/mockInterview.css">
+    <link rel="stylesheet" href="../CSS/aiQuiz.css">
 </head>
 <body>
     <div class="header-container">
@@ -24,29 +24,27 @@
 
 
     <div class="interview-container">
-        <h2 class="form-heading">Prepare for Your Interview</h2>
-        <p class="form-subtext">Provide details about your desired job role and upload your resume to get started.</p>
+        <h2 class="form-heading">Customized Quizes</h2>
+        <p class="form-subtext">Generate the quiz with the uploaded file and the number of questions you want.</p>
     
         <form class="interview-form" action="#" method="post">
-            <label for="job-role"> 
-                <span>Job Role/Job Position:</span><br>
-                <input type="text" id="job-role" required>
-            </label>
-    
-            <label for="yearOfExp"> 
-                <span>Years of Experience:</span><br>
-                <input type="text" id="yearOfExp" required>
-            </label>
-    
-            <label for="job_desc"> 
-                <span>Job Description:</span><br>
-                <input type="text" id="job_desc" required>
-            </label>
-    
             <label for="resume_upload"> 
                 <span>Upload Your Resume:</span><br>
                 <input type="file" id="resume_upload" required>
             </label>
+            <label for="no-of-ques"> 
+                <span>Number of Questions:</span><br>
+                <input type="number" id="no-of-ques" required>
+            </label>
+    
+            <label for="Preferred Language:"> 
+                <span>Preferred Language:</span><br>
+                <input type="text" id="Preferred Language" required>
+            </label>
+    
+           
+    
+           
     
             <button type="submit" class="submit-btn">Submit</button>
         </form>
