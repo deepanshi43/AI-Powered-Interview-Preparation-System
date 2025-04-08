@@ -9,12 +9,13 @@
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 50px;
-        color: rgb(47, 102, 220);
-        text-shadow: 2px 3px rgb(192, 61, 61);
+        color: rgb(38, 44, 230);
+        text-shadow: 2px 3px rgb(193, 25, 120);
     }
     p{
         text-align: center;
         font-size: 30px;
     }
+    
 
 }
