@@ -36,35 +36,41 @@
               <hr><span>or</span><hr>
           </div>
       
-          <form action="/action.php" method="post" >
+          <form  id="registration-form" onsubmit="return validateForm()">
               <label for="FirstName">
                   <span>First Name</span>
                   <input type="text" name="FirstName" id="FirstName" required>
-              </label>
+                  <small id="firstNameError" class="error"></small>
+                </label>
       
               <label for="LastName">
                   <span>Last Name</span>
                   <input type="text" name="LastName" id="LastName" required>
-              </label>
+                  <small id="lastNameError" class="error"></small>
+                </label>
       
               <label for="email">
                   <span>Email</span>
                   <input type="email" name="email" id="email" required>
-              </label>
+                  <small id="emailError" class="error"></small>
+                </label>
       
               <label for="password">
                   <span>Password</span>
                   <input type="password" name="password" id="password" required>
-              </label>
+                   <small id="passwordError" class="error"></small>
+                </label>
       
               <label for="confpass">
                   <span>Confirm Password</span>
                   <input type="password" name="confpass" id="confpass" required>
-              </label>
+             <small id="confPasswordError" class="error"></small>
+                </label>
 
               <label for="resume_upload" > 
                 <span>Upload Your Resume:</span>
-                <input type="file" id="resume_upload" required>
+                <input type="file" id="resume_upload" >
+            <small id="resumeUploadError" class="error"></small>
             </label>
        
               <button type="submit">Sign Up</button>
@@ -82,6 +88,9 @@
         <p>&copy; 2025 Copyright SmartEU-Prep
             All rights are reserved. </p>
     </footer>
+
+     <script src="../JS/script.js"></script>
+
 </body>
 </html> 
 

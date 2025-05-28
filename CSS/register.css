@@ -163,6 +163,9 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #0059b3;
 }
+.error{
+    color:red;
+}
 
 /* Sign-in link */
 .signin-link {
