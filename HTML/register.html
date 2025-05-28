@@ -36,7 +36,7 @@
               <hr><span>or</span><hr>
           </div>
       
-          <form action="/action.php" method="post">
+          <form action="/action.php" method="post" >
               <label for="FirstName">
                   <span>First Name</span>
                   <input type="text" name="FirstName" id="FirstName" required>
@@ -61,7 +61,12 @@
                   <span>Confirm Password</span>
                   <input type="password" name="confpass" id="confpass" required>
               </label>
-      
+
+              <label for="resume_upload" > 
+                <span>Upload Your Resume:</span>
+                <input type="file" id="resume_upload" required>
+            </label>
+       
               <button type="submit">Sign Up</button>
           </form>
       
