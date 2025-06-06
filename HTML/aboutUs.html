@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>aboutUs page</title>
     <link rel="stylesheet" href="../CSS/aboutUs.css">
+     
 </head>
-<body>
-    <div class="header-container">
-        <img src="../Images/SmartEU-Prep (1).png" alt="SmartEU-Prep" class="logo">
-        
-          
-          <nav class="navbar">
-              <ul class="nav-listItems">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="interview.html">Interviews</a></li>
-                  <li><a href="register.html">Register</a></li>
-                  <li><a href="loginPage.html">Login</a></li>
-              </ul>
-            </nav>
-    </div>     
+<body class="bodie">
+   <div class="header-container">
+    <img src="../Images/SmartEU-Prep (1).png" alt="SmartEU-Prep" class="logo">
+    <button class="hamburger" id="hamburger">&#9776;</button>
+    <nav class="navbar">
+        <ul class="nav-listItems" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="interview.html">Interviews</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="loginPage.html">Login</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- aboutUsCard-container -->
 <hr>
     <div class="aboutUsCard-container">
 
@@ -57,7 +58,7 @@
                 <h3>
                 Our Vision
                 </h3>
-                <p>
+                <p >
                     SmartEU-Prep aims to be the top platform for skill development and real-world preparation. Using advanced AI, we provide a personalized, accessible, and engaging learning experience for students and professionals.
                 </p>
             </div>
@@ -72,5 +73,18 @@
         <p>&copy; 2025 Copyright SmartEU-Prep
             All rights are reserved. </p>
     </footer>
+
+    
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navList = document.getElementById('navList');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+</script>
+
+
+    
 </body>
 </html>

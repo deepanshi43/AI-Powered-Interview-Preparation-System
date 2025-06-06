@@ -5,21 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEU-Prep</title>
     <link rel="stylesheet" href="../CSS/loginpage.css">
+    
 </head>
 <body>
     <div class="header-container">
-        <img src="../Images/SmartEU-Prep (1).png" alt="SmartEU-Prep" class="logo">
-        
-          
-          <nav class="navbar">
-              <ul class="nav-listItems">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="interview.html">Interviews</a></li>
-                  <li><a href="register.html">Register</a></li>
-                  <li><a href="loginPage.html">Login</a></li>
-              </ul>
-            </nav>
-    </div>     
+  <img src="../Images/SmartEU-Prep (1).png" alt="SmartEU-Prep" class="logo">
+
+  <!-- Hamburger Button -->
+  <button class="hamburger" aria-label="Toggle navigation">
+    &#9776;
+  </button>
+
+  <nav class="navbar">
+    <ul class="nav-listItems">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="interview.html">Interviews</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="loginPage.html">Login</a></li>
+    </ul>
+  </nav>
+</div>
+
      <hr>
       
       <div class="container">
@@ -36,19 +42,23 @@
               <hr><span>or</span><hr>
           </div>
       
-          <form action="/action.php" method="post">
+          <!-- <form action="/action.php" method="post"> -->
+            <form action="/action.php" method="post" onsubmit="return validateLoginForm()">
+
               
       
-              <label for="email">
-                  <span>Email</span>
-                  <input type="email" name="email" id="email" required>
-              </label>
-      
-              <label for="password">
-                  <span>Password</span>
-                  <input type="password" name="password" id="password" required>
-              </label>
-      
+             <label for="email">
+  <span>Email</span>
+  <input type="email" name="email" id="email" required>
+  <span class="error" id="emailError" style="color:red"></span>
+</label>
+
+<label for="password">
+  <span>Password</span>
+  <input type="password" name="password" id="password" required>
+  <span class="error" id="passwordError" style="color:red"></span>
+</label>
+
               
       
               <button type="submit">Sign In</button>
@@ -72,6 +82,59 @@
         <p>&copy; 2025 Copyright SmartEU-Prep
             All rights are reserved. </p>
     </footer>
+     <!-- Inside <head> (add this before </head>) -->
+<script>
+   const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-listItems');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('show');
+  });
+
+
+
+
+
+
+
+
+
+// validation
+  function validateLoginForm() {
+    let isValid = true;
+
+    // Clear previous errors
+    clearErrors();
+
+    // Validate Email
+    const email = document.getElementById('email').value;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+      document.getElementById('emailError').textContent =
+        'Please enter a valid email address (name@domain.com).';
+      isValid = false;
+    }
+
+    // Validate Password (minimum 6 characters)
+    const password = document.getElementById('password').value;
+    if (password.length < 6) {
+      document.getElementById('passwordError').textContent =
+        'Password must be at least 6 characters long.';
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  function clearErrors() {
+    const errorMessages = document.querySelectorAll('.error');
+    errorMessages.forEach((msg) => (msg.textContent = ''));
+  }
+
+
+</script>
+
+      
 </body>
 </html> 
 

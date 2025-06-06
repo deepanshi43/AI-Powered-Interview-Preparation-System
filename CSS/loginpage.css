@@ -203,3 +203,95 @@ footer{
         color: aliceblue;
     }
 }
+
+
+/* Hamburger button - hidden by default  */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  z-index: 15;
+}/* Media query for screen width below 700px */
+@media screen and (max-width: 700px) {
+
+  /* --- Header adjustments --- */
+  .header-container {
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 60px;
+    position: relative;
+  }
+
+  .header-container img.logo {
+   height: 110px;
+    width: 110px;
+    margin-top: 2.7rem;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  .nav-listItems {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-listItems.show {
+    display: flex;
+  }
+
+  .nav-listItems li {
+    margin: 15px 0;
+  }
+
+  /* --- Container/Form adjustments --- */
+  .container {
+    width: 90%;
+    padding: 40px 20px;
+    margin-top: 100px;
+  }
+
+  .container h3 {
+    font-size: 1.6rem;
+  }
+
+  .google-btn span {
+    font-size: 14px;
+  }
+
+  form input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  form button[type="submit"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .signup-link {
+    font-size: 14px;
+  }
+
+  .forget-password {
+    font-size: 13px;
+  }
+}

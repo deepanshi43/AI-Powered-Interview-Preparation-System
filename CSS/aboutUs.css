@@ -147,6 +147,27 @@ padding-left: 0.6rem;
     box-shadow: 0px 8px 20px rgba(95, 134, 192, 0.5); /* Blue glowing effect */
 }
 
+
+.hamburger {
+  display: none;
+}
+
+footer{
+    margin-top: 100px;
+    text-align: center;
+    background-color: rgb(7, 7, 70);
+    padding: 30px;
+    bottom: 0%;
+    position: relative;
+    color: aliceblue;
+    div span a{
+
+        color: aliceblue;
+    }
+}
+
+
+  
 .animated-text {
     font-size: 2em;
     font-weight: bold;
@@ -168,16 +189,150 @@ padding-left: 0.6rem;
 @keyframes blink {
     50% { border-color: transparent; }
 }
-footer{
-    margin-top: 100px;
-    text-align: center;
-    background-color: rgb(7, 7, 70);
-    padding: 30px;
-    bottom: 0%;
-    position: relative;
-    color: aliceblue;
-    div span a{
 
-        color: aliceblue;
-    }
+
+/* Media Query for screen  */
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .aboutUs-mission-card,
+  .aboutUs-vision-card {
+    height: 550px;
+    width: 320px;
+  }
+   .animated-text {
+    animation: none;
+    width: auto;
+    border: none;
+    white-space: normal; /* allow wrapping if needed */
+    overflow: visible;
+    line-height:0.6;
+    padding-bottom: 1.3rem;
+  }
+  .animated-text span{
+    font-size: 24px;
+    
+    
+  }
+ .aboutUsCard-container-heading p{
+  font-size: 14px;
+
+ }
+
+ .aboutUsCard-container{
+  margin-top: 0;
+ }
+ .header-container{
+  padding-bottom: 0;
+ }
+}
+
+/* Media Query for screen width below 1000px */
+@media (max-width: 999px) {
+  .aboutUs-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutUs-mission-card,
+  .aboutUs-vision-card {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .animated-text {
+    animation: none;
+    width: auto;
+    border: none;
+    white-space: normal; /* allow wrapping if needed */
+    overflow: visible;
+    
+  }
+}
+
+@media (max-width: 700px) {
+  .header-container {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 70px;
+  }
+
+  .header-container img {
+    height: 110px;
+    width: 110px;
+    margin-top: 2.7rem;
+    margin-left: 5px;
+    border-radius: 50%;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+  }
+
+  .nav-listItems {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .nav-listItems.show {
+    display: flex;
+  }
+
+  .nav-listItems li {
+    margin: 15px 0;
+  }
+
+  /* Cards stack vertically on small screens */
+  .aboutUs-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutUs-mission-card,
+  .aboutUs-vision-card {
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+
+  .animated-text {
+    animation: none;
+    width: auto;
+    border: none;
+    white-space: normal; /* allow wrapping if needed */
+    overflow: visible;
+    line-height:0.6;
+    padding-bottom: 1.3rem;
+  }
+  .animated-text span{
+    font-size: 24px;
+    
+    
+  }
+ .aboutUsCard-container-heading p{
+  font-size: 14px;
+
+ }
+
+ .aboutUsCard-container{
+  margin-top: 0;
+ }
+ .header-container{
+  padding-bottom: 0;
+ }
 }

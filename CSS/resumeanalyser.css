@@ -8,7 +8,7 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   line-height:1.5;
   background: linear-gradient(to bottom right , skyblue,white);
- 
+ max-width: 100%;
 }
 .header-container{
   display:flex;
@@ -185,4 +185,126 @@ footer{
 
         color: aliceblue;
     }
+}
+
+
+
+
+
+
+
+@media (max-width: 950px) {
+  .resume-analyzer-card {
+    
+    flex-direction: column;
+    height: auto; /* allow height to adjust based on content */
+    padding: 20px;
+    margin-left: 60px;
+     margin-right: 60px;
+
+  }
+  .resume-analyzer-card  form{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+     padding-left: 40px;
+padding-right: 40px;
+    margin: -20px;
+  }
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .form-group,
+  .upload-btn-wrapper {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .upload-btn-wrapper {
+    margin-top: 0;
+    padding-left: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .upload-btn-wrapper button {
+    width: 100%;
+  }
+  .animated-text {
+    animation: none;
+    width: auto; /* show full text */
+    border-right: none;
+    white-space: normal; /* allow text to wrap if needed */
+  }
+  .resume-analyzer-header{
+    margin-left: 60px;
+  }
+}
+
+/* Hamburger button - hidden by default */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  z-index: 15;
+}
+
+/* Media query for screen width below 700px */
+@media (max-width: 700px) {
+
+  /* Header container layout - logo left, hamburger right */
+  .header-container {
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 60px;
+    position: relative;
+  }
+
+  /* Smaller logo */
+  .header-container img.logo {
+    height: 110px;
+    width: 110px;
+    margin-top: 2.7rem;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  /* Nav menu - hidden by default */
+  .nav-listItems {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Show nav when toggled */
+  .nav-listItems.show {
+    display: flex;
+  }
+
+  /* Nav list items vertical spacing */
+  .nav-listItems li {
+    margin: 15px 0;
+  }
+
+ 
 }

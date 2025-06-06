@@ -9,7 +9,10 @@ body{
     line-height:1.5;
     background: linear-gradient(to bottom right , skyblue,white);
    
+    min-height: 100vh;
+   
 }
+
 .header-container{
     display:flex;
     justify-content: space-around;
@@ -141,16 +144,112 @@ font-weight:bold;
 
 
 
-footer{
-    margin-top: 200px;
+
+
+
+footer {
     text-align: center;
     background-color: rgb(7, 7, 70);
     padding: 30px;
-    bottom: 0%;
-    position: relative;
     color: aliceblue;
-    div span a{
+}
 
-        color: aliceblue;
-    }
+footer div span a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+
+/* Hamburger button - hidden by default */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  z-index: 15;
+}
+
+/* Media query for screen width below 700px */
+@media (max-width: 700px) {
+
+  /* Header container layout - logo left, hamburger right */
+  .header-container {
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 60px;
+    position: relative;
+  }
+
+  /* Smaller logo */
+  .header-container img.logo {
+    height: 110px;
+    width: 110px;
+    margin-top: 2.7rem;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  /* Nav menu - hidden by default */
+  .nav-listItems {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Show nav when toggled */
+  .nav-listItems.show {
+    display: flex;
+  }
+
+  /* Nav list items vertical spacing */
+  .nav-listItems li {
+    margin: 15px 0;
+  }}
+
+
+  @media (max-width: 700px) {
+  .interview-container input[type="number"],
+  .interview-container input[type="text"] {
+    width: 80%; /* or any smaller width you want */
+    font-size: 14px; /* optionally reduce font size */
+    padding-left: 15px; /* optionally reduce padding */
+
+  }
+  
+  .interview-container {
+    padding: 10px; /* optional: reduce padding */
+    margin-left:40px;
+     margin-right:40px;
+
+  }
+
+  .interview-container .form-heading {
+    font-size: 1.4rem; /* smaller heading */
+  }
+  .interview-form{
+    padding-left:3rem;
+  }
+  .submit-btn{
+    width: 40%;
+    margin-left:65px;
+    margin-right:50px
+  }
 }

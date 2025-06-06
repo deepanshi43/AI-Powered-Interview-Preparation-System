@@ -1,3 +1,5 @@
+
+
 *{
     margin:0;
     padding:0;
@@ -39,7 +41,6 @@ font-weight:bold;
 .nav-listItems li a:hover{
     text-decoration: underline;
 }
-
 .header-container img{
     margin-top: 100px;
     height: 200px;
@@ -49,19 +50,24 @@ font-weight:bold;
     border-color: rgb(209, 122, 16);
     
 }
-hr{
-color: blue;
-}
-.sub-header{
-    margin-top: 100px;
+
+/* navbar complete */
+
+    hr {
+      color: blue;
+    }
+
+    .sub-header{
+    margin-top: 110px;
     display: flex;
+    margin-bottom: 120px;
     
     h2{
-        padding-top: 100px;
-        padding-left: 15px;
+        padding-top: 90px;
+        padding-left: 25px;
         text-align: left;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 60px;
+        font-size: 50px;
         animation: typewriter 6s steps(12, end) forwards, blink 0.8s  steps(2, start)  infinite;
     }
     p{
@@ -72,10 +78,14 @@ color: blue;
       
     }
     img{
+        margin-top: 90px;
+        /* padding-top: 30px; */
         margin-left: 40px;
-        padding-left: 60px;
-        height: 350px;
-        width: 400px;
+        padding-left: 40px;
+         padding-right: 40px;
+        margin-right:40px ;
+        height: 300px;
+        width: 350px;
         box-shadow: 2px 2px blue;
         border-radius: 10%;
        
@@ -84,7 +94,7 @@ color: blue;
     button{
         margin-top: 40px;
         height: 40px;
-        width: 250px;
+        width: 230px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 25px;
         background-color: rgb(78, 173, 229);
@@ -96,11 +106,21 @@ color: blue;
 .start-button{
     margin-left: 30%;
 }
+
+
+
+
+
+
+
+
 .card-container{
-    margin-top: 210px;
+    margin-top: 140px;
     display:flex;
     justify-content: space-between;
-    
+    padding-left: 40px;
+     padding-right: 40px;
+
 }
 .quiz-card,.resumeAnalyzer-card,.mockInterview-card{
     margin: 20px;
@@ -113,97 +133,65 @@ color: blue;
 
 }
 
-.testimonials{
-    margin-top: 150px;
-}
-.card-container{
-    height: 550px;
-    
-    h4{
-        margin-top: 10px;
-        font-size: 24px;
-        font-family: Georgia, 'Times New Roman', Times, serif;
+.card-container img {
+      width: 90%;
+      height: 200px;
+      border-radius: 10%;
+      box-shadow: 1.5px 2.5px black;
     }
-    p{
-        font-size: 18px;
-        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        text-align: start;
+    .card-container h4 {
+      margin-top: 10px;
+      font-size: 24px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
     }
-    .card-heading{
-        text-align: center;
+    .card-container p {
+      font-size: 16px;
+      text-align: center;
     }
-    button{
-        margin-top: 10px;
-        width: 300px;
-        height: 30px;
-        border-radius: 15px;
-        font-size: 14px;
-        color: aliceblue;
-        background-color: rgb(119, 54, 193);
-        box-shadow: 3px 1px black;
+    .card-container button {
+      margin-top: 10px;
+      width: 80%;
+      height: 35px;
+      border-radius: 15px;
+      font-size: 16px;
+      color: aliceblue;
+      background-color: rgb(119, 54, 193);
+      box-shadow: 3px 1px black;
     }
-    .learn-button{
-        margin-top: 25px;
-        
-    }
-    .AI-button{
-        margin-top: 40px;
-    }
-    img{
-        height: 240px;
-        width: 350px;
-        border-radius: 10%;
-        box-shadow: 1.5px 2.5px black;
-    }
-    
-}
-.quiz-card:hover{
-    animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  .resumeAnalyzer-card:hover{
-    animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  .mockInterview-card:hover{
-    animation: pulse 1.5s infinite;
-}
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
-button:hover{
+
+.quiz-card:hover,.resumeAnalyzer-card:hover,.mockInterview-card:hover{
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .button:hover{
     cursor:pointer;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.testimonials{
+    margin-top: 150px;
+}
 .testimonials{
     margin-top: 85px;
     h4{
@@ -216,7 +204,7 @@ button:hover{
    
 
 }
-.testimonials-list{
+/* .testimonials-list{
     margin-top: 75px;
     display: flex;
     
@@ -232,7 +220,47 @@ button:hover{
     text-align: center;
     font-size: 16px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} */
+
+
+.testimonials-list {
+  margin-top: 75px;
+  display: flex;
+  overflow-x: auto;        /* Enables horizontal scroll */
+  scroll-behavior: smooth;
+  padding: 10px;
+  gap: 20px;
+
+   padding-bottom: 30px; 
 }
+
+.testimonials-list > div {
+  flex: 0 0 auto;              /* Stays in a row */
+  width: 300px;                /* Fixed width for scroll layout */
+  margin-right: 10px;
+  padding: 20px;
+  border-radius: 35px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: white;
+
+  /* Ensures the text does NOT overflow horizontally */
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+
+  /* Allows height to expand for longer text */
+  height: auto;
+  min-height: 150px; /* optional: default height */
+}
+
+
+
+
+
 .feedback-button{
     margin-top: 70px;
     float: right;
@@ -268,3 +296,217 @@ footer{
     }
 }
 
+
+
+.testimonials-list > div {
+  transition: transform 0.3s ease;  /* Smooth transition */
+}
+
+.testimonials-list > div:hover {
+  transform: scale(1.03);  /* Slight zoom out */
+}
+
+
+
+
+
+
+
+    
+
+
+
+ @media screen and (max-width: 1000px) {
+  .card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 80px;
+  }
+
+  .quiz-card,
+  .resumeAnalyzer-card {
+    width: 45%; /* Two cards side-by-side */
+    margin: 10px;
+  }
+
+  .mockInterview-card {
+    width: 50%; /* Full width for 3rd card */
+    margin: 20px auto;
+    height: auto; /* Reduced height */
+  }
+
+  .mockInterview-card img {
+    height: 140px; /* Adjust image size inside */
+  }
+
+
+
+
+
+
+
+
+
+
+  
+  
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .sub-header {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .sub-header div {
+    width: 90%;
+  }
+
+  .sub-header h2 {
+    font-size: 32px;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+  }
+
+  .sub-header p {
+    padding: 10px 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .sub-header img {
+
+    height: 250px;
+    width: 400px;
+    margin: 10px auto;
+    display: block;
+    margin-top: 130px;
+  }
+
+  .start-button {
+    margin: 20px auto;
+    width: 200px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .quiz-card,
+  .resumeAnalyzer-card,
+  .mockInterview-card {
+    width: 80%;
+    margin: 15px 0;
+  }
+
+  .card-container button {
+    width: 90%;
+  }
+
+  .card-container img {
+    width: 60%;
+    height: 190px;
+  }
+  .quiz-card
+  
+  .learn-button{
+    width:270px;
+  }
+  .quiz-card a .btoon{
+     width:270px;
+  }
+
+.resumeAnalyzer-card a .AI-button{
+ width:270px;
+}
+
+
+ .mockInterview-card
+  
+  .learn-button{
+    width:270px;
+  }
+  .mockInterview-card a .btoon{
+     width:270px;
+  }
+}
+
+
+/* Hamburger button - hidden by default  */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  z-index: 15;
+}
+
+
+
+
+
+
+/* Media query for screen width below 700px */
+@media screen and (max-width: 700px) {
+
+  /* --- Header adjustments --- */
+  .header-container {
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 60px;
+    position: relative;
+  }
+
+  .header-container img.logo {
+    height: 110px;
+    width: 110px;
+    margin-top: 2.7rem;
+    border-radius: 50%;
+    box-shadow: 2.8px 5px black;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+  }
+
+  .nav-listItems {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-listItems.show {
+    display: flex;
+  }
+
+  .nav-listItems li {
+    margin: 15px 0;
+  }
+
+ 
+}
