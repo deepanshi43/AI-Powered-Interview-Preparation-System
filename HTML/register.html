@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEU-Prep</title>
     <link rel="stylesheet" href="../CSS/register.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
      
 </head>
 <body>
@@ -15,27 +16,46 @@
   <button class="hamburger" aria-label="Toggle navigation">
     &#9776;
   </button>
+   <nav class="navbar">
+            <ul class="nav-listItems">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                <a href="#">Interviews</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Teaching</a></li>
+                  <li><a href="#">HR</a></li>
+                  <li><a href="#">Accountant</a></li>
+                  <li id="sub-dropdown" onclick="dropdown(event)">
+  <a href="#">IT Department <span class="arrow">&#9654;</span></a>
+  <ul class="sub-dropdown-menu">
+    <li><a href="#">Analyst</a></li>
+    <li><a href="#">Hardware Engineer</a></li>
+    <li><a href="#">Web Developer</a></li>
+  </ul>
+</li>
 
-  <nav class="navbar">
-    <ul class="nav-listItems">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="interview.html">Interviews</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="loginPage.html">Login</a></li>
-    </ul>
-  </nav>
+                  <li><a href="#">Management</a></li>
+                </ul>
+                </li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="loginPage.html">Login</a></li>
+            </ul>
+          </nav>
+
+           <div class="theme-switch-wrapper">
+  <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <span class="slider round"></span>
+  </label>
+  <span id="theme-icon">☀️</span>
+</div>
 </div>
      <hr>
       
       <div class="container">
           <h3>Sign Up</h3>
       
-          <div>
-              <button type="button" class="google-btn" onclick="window.location.href='https://google.com'">
-                  <img src="https://static.vecteezy.com/system/resources/previews/011/598/471/original/google-logo-icon-illustration-free-vector.jpg" alt="google" height="30" width="30">
-                  <span>LOGIN WITH GOOGLE</span>
-              </button>
-          </div>
+         <div id="g_id_signin"></div>
       
           <div class="divider">
               <hr><span>or</span><hr>
@@ -85,6 +105,7 @@
               <p>Already have an account? <a href="loginPage.html">Sign In</a></p>
           </div>
       </div>
+     
       
      
       
@@ -96,13 +117,42 @@
 
      <script src="../JS/script.js"></script>
      <script>
-   const hamburger = document.querySelector('.hamburger');
-  const navList = document.querySelector('.nav-listItems');
+  
+ 
+    window.onload = function () {
+      google.accounts.id.initialize({
+        client_id: "485521769094-heu4aat6u22d55ks9r80qsuki4dcf0jl.apps.googleusercontent.com", // Your Client ID here
+        callback: handleCredentialResponse
+      });
 
-  hamburger.addEventListener('click', () => {
-    navList.classList.toggle('show');
-  });
+      // Render the official Google Sign-In button
+      google.accounts.id.renderButton(
+        document.getElementById("g_id_signin"),
+        { theme: "outline", size: "large" } // customize as you want
+      );
 
+      // Optionally, prompt One Tap sign-in automatically
+      // google.accounts.id.prompt();
+    };
+
+    function handleCredentialResponse(response) {
+      console.log("Encoded JWT ID token: " + response.credential);
+
+      const user = decodeJwt(response.credential);
+      console.log(user);
+
+      // Send token to server for login verification
+    }
+
+    function decodeJwt(token) {
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(atob(base64).split('').map(c =>
+        '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)
+      ).join(''));
+      return JSON.parse(jsonPayload);
+    }
+  
 </script>
 
 

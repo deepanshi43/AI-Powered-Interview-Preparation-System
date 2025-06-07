@@ -16,14 +16,38 @@
     &#9776;
   </button>
 
-  <nav class="navbar">
-    <ul class="nav-listItems">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="interview.html">Interviews</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="loginPage.html">Login</a></li>
-    </ul>
-  </nav>
+     <nav class="navbar">
+            <ul class="nav-listItems">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                <a href="#">Interviews</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Teaching</a></li>
+                  <li><a href="#">HR</a></li>
+                  <li><a href="#">Accountant</a></li>
+                  <li id="sub-dropdown" onclick="dropdown(event)">
+  <a href="#">IT Department <span class="arrow">&#9654;</span></a>
+  <ul class="sub-dropdown-menu">
+    <li><a href="#">Analyst</a></li>
+    <li><a href="#">Hardware Engineer</a></li>
+    <li><a href="#">Web Developer</a></li>
+  </ul>
+</li>
+
+                  <li><a href="#">Management</a></li>
+                </ul>
+                </li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="loginPage.html">Login</a></li>
+            </ul>
+          </nav>
+          <div class="theme-switch-wrapper">
+  <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <span class="slider round"></span>
+  </label>
+  <span id="theme-icon">☀️</span>
+</div>
 </div>
 
 
@@ -51,6 +75,7 @@
         </form>
     </div>
     
+    
     <footer>
         <div> <span><a href="aboutUs.html">About us</a></span> | <span><a href="contactUs.html">Contact us</a></span> | <span><a href="policies.html">Policies</a></span></div>
         <p>&copy; 2025 Copyright SmartEU-Prep
@@ -63,6 +88,38 @@
   hamburger.addEventListener('click', () => {
     navList.classList.toggle('show');
   });
+
+  const checkbox = document.getElementById("checkbox");
+  const icon = document.getElementById("theme-icon");
+
+  checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("dark-theme");
+    icon.textContent = document.body.classList.contains("dark-theme") ? "🌙" : "☀️";
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropdown = document.querySelector('.dropdown > a');
+    const menu = document.querySelector('.dropdown-menu');
+
+    dropdown.addEventListener('click', function (e) {
+      e.preventDefault();
+      menu.classList.toggle('show');
+    });
+  });
+
+
+function dropdown(e) {
+   e.stopPropagation(); // optional: prevents bubbling if needed
+
+  const content = e.currentTarget;
+  const subMenu = content.querySelector('.sub-dropdown-menu');
+  const arrow = content.querySelector('.arrow');
+
+  if (subMenu) {
+    subMenu.classList.toggle('show');
+    arrow.classList.toggle('rotate');
+  }
+}
 </script>
 </body>
 </html>

@@ -7,10 +7,20 @@
   <link rel="stylesheet" href="../CSS/feedback.css" />
 </head>
 <body>
-  <div class="header">
-    <h2>SmartEU Prep - Feedback Form</h2>
+  <div class="header-container">
+    <div class="heading">
+      <h2>SmartEU Prep - Feedback Form</h2>
     <p>Thank you for using SmartEU Prep! Your feedback helps us create a better experience for you.</p>
+    </div>
+     <div class="theme-switch-wrapper">
+  <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <span class="slider round"></span>
+  </label>
+  <span id="theme-icon">☀️</span>
+</div>
   </div>
+
 
   <div class="inner-box">
     <form action="#">
@@ -59,7 +69,7 @@
           </div>
         </li>
         <li>
-          <p class="question1">Did the AI provide relevant and actionable feedback?</p>
+          <p class="question">Did the AI provide relevant and actionable feedback?</p>
           <div class="row-options">
             <label><input type="radio" name="options" /> Yes</label>
             <label><input type="radio" name="options" /> No</label>
@@ -86,5 +96,15 @@
       </div>
     </form>
   </div>
+ 
+<script>
+  const checkbox = document.getElementById("checkbox");
+  const icon = document.getElementById("theme-icon");
+
+  checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("dark-theme");
+    icon.textContent = document.body.classList.contains("dark-theme") ? "🌙" : "☀️";
+  });
+</script>
 </body>
 </html>

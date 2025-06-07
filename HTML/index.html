@@ -16,14 +16,38 @@
     &#9776;
   </button>
 
-  <nav class="navbar">
-    <ul class="nav-listItems">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="interview.html">Interviews</a></li>
-      <li><a href="register.html">Register</a></li>
-      <li><a href="loginPage.html">Login</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+            <ul class="nav-listItems">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                <a href="#">Interviews</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Teaching</a></li>
+                  <li><a href="#">HR</a></li>
+                  <li><a href="#">Accountant</a></li>
+                  <li id="sub-dropdown" onclick="dropdown(event)">
+  <a href="#">IT Department <span class="arrow">&#9654;</span></a>
+  <ul class="sub-dropdown-menu">
+    <li><a href="#">Analyst</a></li>
+    <li><a href="#">Hardware Engineer</a></li>
+    <li><a href="#">Web Developer</a></li>
+  </ul>
+</li>
+
+                  <li><a href="#">Management</a></li>
+                </ul>
+                </li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="loginPage.html">Login</a></li>
+            </ul>
+          </nav>
+           <div class="theme-switch-wrapper">
+  <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <span class="slider round"></span>
+  </label>
+  <span id="theme-icon">☀️</span>
+</div>
 </div>
     <hr>
     <div class="sub-header">
@@ -118,6 +142,7 @@
         <p>(Data Engineer)</p>
       </div>
     </div>
+    
    
 
 
@@ -127,43 +152,7 @@
         <p>&copy; 2025 Copyright SmartEU-Prep
             All rights are reserved. </p>
     </footer>
-    <script>
-   const hamburger = document.querySelector('.hamburger');
-  const navList = document.querySelector('.nav-listItems');
-
-  hamburger.addEventListener('click', () => {
-    navList.classList.toggle('show');
-  });
-
-
-
-
-
-
-
-
-
-
-  
-  function scrollToCards() {
-    const cardSection = document.getElementById("cards");
-    cardSection.scrollIntoView({ behavior: "smooth" });
-  }
-
-
-
-
-  function scrollTestimonials(direction) {
-    const container = document.querySelector('.testimonials-list');
-    const scrollAmount = 320; // Adjust based on width of testimonial
-
-    if (direction === 'left') {
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  }
-
-</script>
+    <script src="../JS/index.js"></script>
+    
 </body>
 </html>
