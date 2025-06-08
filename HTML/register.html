@@ -61,7 +61,7 @@
               <hr><span>or</span><hr>
           </div>
       
-          <form  id="registration-form" onsubmit="return validateForm()">
+          <form  id="registration-form" onsubmit="return submitForm()" method="post" >
               <label for="FirstName">
                   <span>First Name</span>
                   <input type="text" name="FirstName" id="FirstName" required>
@@ -136,13 +136,29 @@
     };
 
     function handleCredentialResponse(response) {
-      console.log("Encoded JWT ID token: " + response.credential);
+      const user = decodeJwt(response.credential);  // Decode the Google token
+  console.log("Google user data:", user);       // Optional: just for debugging
 
-      const user = decodeJwt(response.credential);
-      console.log(user);
+  const formData = new FormData();
+  formData.append('FirstName', user.given_name || '');
+  formData.append('LastName', user.family_name || '');
+  formData.append('email', user.email);
+  formData.append('login_type', 'google');  // This flags it as Google login
 
+  // Send user info to your PHP backend to save in DB
+  fetch("register_user.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert("Google Sign-In: " + data);  // Show server response
+    window.location.href = "dashboard.html"; // redirect if needed
+  })
+  .catch(err => console.error("Google Sign-In Error:", err));
+}
       // Send token to server for login verification
-    }
+    
 
     function decodeJwt(token) {
       const base64Url = token.split('.')[1];
@@ -154,6 +170,28 @@
     }
   
 </script>
+
+<script>
+document.getElementById("registration-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const form = document.getElementById("registration-form");
+  const formData = new FormData(form);
+  formData.append('login_type', 'manual');
+
+  fetch("http://localhost/smarteu-prep/register_user.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.text())
+  .then(data => {
+    alert(data);
+    form.reset();
+  })
+  .catch(err => console.error("Error:", err));
+});
+</script>
+
 
 
 </body>
