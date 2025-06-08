@@ -118,33 +118,12 @@
       
     </div>
     <div class="testimonials">
-        <h4>Real success, Real stories — be the next to ace your interview!</h4>
-    </div>
-    <div class="testimonials-list">
-     <div class="testimonial-1">
-      <p>It's very good and very useful.Thankyou for this system.</p>
-      <p>Pragya Kumar</p>
-      <p>(Software Engineer)</p>
+  <h4>Real success, Real stories — be the next to ace your interview!</h4>
+</div>
 
-    </div>
-     <div class="testimonial-2">
-      <p>Awesome analysis love the facts! great site to practice</p>
-      <p>Veerbhadra Sekhawat</p>
-      <p>(Data Analyst)</p>
-     </div>
-     <div class="testimonial-3">
-      <p>Best Trainimg for interview and decrease the fear of interview.</p>
-      <p>Rajat kharoud</p>
-      <p>(HR Manager)</p></div>
-      <div class="testimonial-4">
-        <p>SmartEU Prep gave me the confidence I needed for my interviews. The AI-driven insights and practice sessions were incredibly helpful!</p>
-        <p>Deepanshi</p>
-        <p>(Data Engineer)</p>
-      </div>
-    </div>
-    
-   
-
+<div class="testimonials-list" id="dynamic-testimonials">
+  <!-- Dynamic testimonials will load here -->
+</div>
 
     <a href="feedback.html"><button type="button" class="feedback-button">Share Your Thoughts</button></a>
     <footer>
@@ -153,6 +132,24 @@
             All rights are reserved. </p>
     </footer>
     <script src="../JS/index.js"></script>
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById("dynamic-testimonials");
+    if (container) {
+      fetch("http://localhost/TESTI/load_dynamic_testimonials.php")
+        .then(response => response.text())
+        .then(data => {
+          container.innerHTML = data;
+        })
+        .catch(error => {
+          console.error("Error loading testimonials:", error);
+        });
+    }
+  });
+
+</script>
+
     
 </body>
 </html>

@@ -23,78 +23,56 @@
 
 
   <div class="inner-box">
-    <form action="#">
-      <h3>Overall Experience</h3>
-      <p class="question">How satisfied are you with your overall experience on SmartEU Prep?</p>
-      <div class="rating options">
-        <label><input type="radio" name="experience" value="VS" /> Very Satisfied 😃</label>
-        <label><input type="radio" name="experience" value="S" /> Satisfied 🙂</label>
-        <label><input type="radio" name="experience" value="N" /> Neutral 😐</label>
-        <label><input type="radio" name="experience" value="D" /> Dissatisfied 🙁</label>
-        <label><input type="radio" name="experience" value="VD" /> Very Dissatisfied 😡</label>
-      </div>
+   <form action="http://localhost/TESTI/submit_feedback.php" method="POST">
+  <!-- Overall Experience -->
+  <h3>Overall Experience</h3>
+  <p class="question">How satisfied are you with your overall experience on SmartEU Prep?</p>
+  <div class="rating options">
+    <label><input type="radio" name="experience" value="Very Satisfied" /> Very Satisfied 😃</label>
+    <label><input type="radio" name="experience" value="Satisfied" /> Satisfied 🙂</label>
+    <label><input type="radio" name="experience" value="Neutral" /> Neutral 😐</label>
+    <label><input type="radio" name="experience" value="Dissatisfied" /> Dissatisfied 🙁</label>
+    <label><input type="radio" name="experience" value="Very Dissatisfied" /> Very Dissatisfied 😡</label>
+  </div>
 
-      <h3>Platform Usability</h3>
-      <ul>
-        <li>
-          <p class="question">Was the platform easy to navigate?</p>
-          <div class="row-options">
-            <label><input type="radio" name="option" /> Yes</label>
-            <label><input type="radio" name="option" /> No</label>
-          </div>
-        </li>
-        <li>
-          <p class="question">Did you face any technical issue?</p>
-          <div class="row-options">
-            <label><input type="radio" name="issue" /> Yes</label>
-            <label><input type="radio" name="issue" /> No</label>
-          </div>
-          <div class="text-input">
-            <label>If yes, specify: <input type="text" id="box" /></label>
-          </div>
-        </li>
-      </ul>
+  <!-- Features & Performance -->
+  <h3>Features & Performance</h3>
+  <p class="question">Which features did you find most helpful?</p>
+  <div class="options-2">
+    <label><input type="checkbox" name="features[]" value="AI-Powered Interview Simulations" /> 📹 AI-Powered Interview Simulations</label>
+    <label><input type="checkbox" name="features[]" value="Personalized Feedback" /> 📝 Personalized Feedback</label>
+    <label><input type="checkbox" name="features[]" value="Mock Interviews" /> 🎭 Mock Interviews</label>
+    <label><input type="checkbox" name="features[]" value="Resume Analyzer" /> 📊 Resume Analyzer</label>
+    <label><input type="checkbox" name="features[]" value="AI Quiz Experience" /> 🤖 AI Quiz Experience</label>
+    <label>✨ Other: <input type="text" name="other_feature" /></label>
+  </div>
 
-      <h3>Features & Performance</h3>
-      <ul>
-        <li>
-          <p class="question">Which features did you find most helpful?</p>
-          <div class="options-2">
-            <label><input type="checkbox" /> 📹 AI-Powered Interview Simulations</label>
-            <label><input type="checkbox" /> 📝 Personalized Feedback</label>
-            <label><input type="checkbox" /> 🎭 Mock Interviews</label>
-            <label><input type="checkbox" /> 📊 Resume Analyzer</label>
-            <label><input type="checkbox" /> 🤖 AI Quiz Experience</label>
-            <label>✨ Other: <input type="text" /></label>
-          </div>
-        </li>
-        <li>
-          <p class="question">Did the AI provide relevant and actionable feedback?</p>
-          <div class="row-options">
-            <label><input type="radio" name="options" /> Yes</label>
-            <label><input type="radio" name="options" /> No</label>
-          </div>
-        </li>
-      </ul>
+  <!-- Recommendation -->
+  <h3>Recommendation</h3>
+  <p class="question">Would you recommend SmartEU-Prep to others?</p>
+  <div class="row-options">
+    <label><input type="radio" name="recommendation" value="Yes" /> Yes</label>
+    <label><input type="radio" name="recommendation" value="No" /> No</label>
+  </div>
+  <div class="text-input">
+    <label>If no, specify: <input type="text" name="no_reason" /></label>
+  </div>
+  <div class="text-input">
+  <label>Write a short testimonial (if you want to display it):</label><br>
+  <textarea name="testimonial" rows="4" cols="50" placeholder="Your testimonial..."></textarea>
+</div>
 
-      <h3>Recommendation</h3>
-      <ul>
-        <li>
-          <p class="question">Would you recommend SmartEU-Prep to others?</p>
-          <div class="row-options">
-            <label><input type="radio" name="opt" /> Yes</label>
-            <label><input type="radio" name="opt" /> No</label>
-          </div>
-          <div class="text-input">
-            <label>If no, specify: <input type="text" /></label>
-          </div>
-        </li>
-      </ul>
 
-      <div class="testimonial">
-        <label><input type="checkbox" name="testimonial" /> <strong>Would you like to add your feedback in Testimonials?</strong></label>
-      </div>
-    </form>
+  <!-- Testimonial Checkbox and Submit Button -->
+  <div class="testimonial">
+    <label>
+      <input type="checkbox" name="testimonial_checkbox" value="yes" />
+      <strong>Would you like to add your feedback in Testimonials?</strong>
+    </label>
+    <button type="submit" style="background: #242357; color: azure; padding: 6px; margin-left: 30px; border-radius: 3px; max-width: 200px; width: 15%; font-size: 16px;">Submit</button>
+  </div>
+</form>
+
   </div>
  
 <script>

@@ -247,61 +247,38 @@ font-size:large;
 
 
 
-
-
-
-
-
-
-
-.testimonials{
-    margin-top: 150px;
+.testimonials {
+  margin-top: 85px;
 }
-.testimonials{
-    margin-top: 85px;
-    h4{
-        font-size: 45px;
-        font-family:cursive;
-        color: rgb(56, 43, 230);
-        font-style: italic;
-        font-weight: lighter;
-    }
-   
-
+.testimonials h4 {
+  font-size: 45px;
+  font-family: cursive;
+  color: rgb(56, 43, 230);
+  font-style: italic;
+  font-weight: lighter;
 }
-/* .testimonials-list{
-    margin-top: 75px;
-    display: flex;
-    
-    justify-content: space-between;
-    
-}
-.testimonial-1,.testimonial-2,.testimonial-3,.testimonial-4{
-    margin: 25px;
-    padding: 10px;
-    width: 30%;
-    border-radius: 35px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.8);
-    text-align: center;
-    font-size: 16px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-} */
-
 
 .testimonials-list {
   margin-top: 75px;
   display: flex;
-  overflow-x: auto;        /* Enables horizontal scroll */
+  overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px;
   gap: 20px;
-
-   padding-bottom: 30px; 
+  padding-bottom: 30px;
 }
 
-.testimonials-list > div {
-  flex: 0 0 auto;              /* Stays in a row */
-  width: 300px;                /* Fixed width for scroll layout */
+.testimonials-list::-webkit-scrollbar {
+  display: none;
+}
+.testimonials-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonial-box {
+  flex: 0 0 auto;
+  width: 300px;
   margin-right: 10px;
   padding: 20px;
   border-radius: 35px;
@@ -310,17 +287,45 @@ font-size:large;
   font-size: 16px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: white;
-
-  /* Ensures the text does NOT overflow horizontally */
   white-space: normal;
   overflow-wrap: break-word;
-  word-wrap: break-word;
   word-break: break-word;
-
-  /* Allows height to expand for longer text */
   height: auto;
-  min-height: 150px; /* optional: default height */
+  min-height: 150px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
