@@ -22,20 +22,20 @@
                 <li class="dropdown">
                 <a href="#">Interviews</a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Teaching</a></li>
-                  <li><a href="#">HR</a></li>
-                  <li><a href="#">Accountant</a></li>
-                  <li id="sub-dropdown" onclick="dropdown(event)">
-  <a href="#">IT Department <span class="arrow">&#9654;</span></a>
-  <ul class="sub-dropdown-menu">
-    <li><a href="#">Analyst</a></li>
-    <li><a href="#">Hardware Engineer</a></li>
-    <li><a href="#">Web Developer</a></li>
-  </ul>
-</li>
+  <li><a href="#" data-role="teaching">Teaching</a></li>
+  <li><a href="#" data-role="hr">HR</a></li>
+  <li><a href="#" data-role="accountant">Accountant</a></li>
+  <li id="sub-dropdown" onclick="dropdown(event)">
+    <a href="#">IT Department <span class="arrow">&#9654;</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#" data-role="analyst">Analyst</a></li>
+      <li><a href="#" data-role="hw">Hardware Engineer</a></li> 
+      <li><a href="#" data-role="web developer">Web Developer</a></li>
+    </ul>
+  </li>
+  <li><a href="#" data-role="management">Management</a></li>
+</ul>
 
-                  <li><a href="#">Management</a></li>
-                </ul>
                 </li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="loginPage.html">Login</a></li>
@@ -149,6 +149,52 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 </script>
+
+
+
+
+
+<!-- 
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('../LOGIN/session_check.php')
+        .then(res => res.json())
+        .then(data => {
+          if (data.loggedIn) {
+            alert('You are logged in as ' + data.user);
+
+            // Hide Login and Register buttons
+            document.querySelectorAll('a[href="loginPage.html"], a[href="register.html"]').forEach(el => {
+              el.style.display = 'none';
+            });
+
+            // Show Logout button if it exists
+            const logoutLink = document.getElementById('logoutLink');
+            if (logoutLink) logoutLink.style.display = 'inline';
+          }
+        })
+        .catch(err => console.error("Session check failed", err));
+    });
+    </script> -->
+
+    <script>
+  fetch("../LOGIN/session_check.php")
+    .then(res => res.json())
+    .then(data => {
+      if (data.loggedIn) {
+        alert("You are logged in as " + data.user);
+        document.querySelectorAll('a[href="loginPage.html"], a[href="register.html"]').forEach(el => el.style.display = 'none');
+        const logoutLink = document.getElementById('logoutLink');
+        if (logoutLink) logoutLink.style.display = 'inline';
+      }
+    });
+
+    
+</script>
+
+
+
+
 
     
 </body>

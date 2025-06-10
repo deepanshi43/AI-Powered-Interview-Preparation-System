@@ -5,59 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartEU-Prep</title>
     <link rel="stylesheet" href="../CSS/mockInterview.css">
-    
 </head>
 <body>
     <div class="header-container">
-  <img src="../Images/SmartEU-Prep (1).png" alt="SmartEU-Prep" class="logo">
-
-  <!-- Hamburger Button -->
-  <button class="hamburger" aria-label="Toggle navigation">
-    &#9776;
-  </button>
-
-     <nav class="navbar">
+        <img src="../Images/SmartEU-Prep (1).png" alt="SmartEU-Prep" class="logo">
+        
+          
+         <nav class="navbar">
             <ul class="nav-listItems">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                 <a href="#">Interviews</a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Teaching</a></li>
-                  <li><a href="#">HR</a></li>
-                  <li><a href="#">Accountant</a></li>
-                  <li id="sub-dropdown" onclick="dropdown(event)">
-  <a href="#">IT Department <span class="arrow">&#9654;</span></a>
-  <ul class="sub-dropdown-menu">
-    <li><a href="#">Analyst</a></li>
-    <li><a href="#">Hardware Engineer</a></li>
-    <li><a href="#">Web Developer</a></li>
-  </ul>
-</li>
+  <li><a href="#" data-role="teaching">Teaching</a></li>
+  <li><a href="#" data-role="hr">HR</a></li>
+  <li><a href="#" data-role="accountant">Accountant</a></li>
+  <li id="sub-dropdown" onclick="dropdown(event)">
+    <a href="#">IT Department <span class="arrow">&#9654;</span></a>
+    <ul class="sub-dropdown-menu">
+      <li><a href="#" data-role="analyst">Analyst</a></li>
+      <li><a href="#" data-role="hw">Hardware Engineer</a></li> 
+      <li><a href="#" data-role="web developer">Web Developer</a></li>
+    </ul>
+  </li>
+  <li><a href="#" data-role="management">Management</a></li>
+</ul>
 
-                  <li><a href="#">Management</a></li>
-                </ul>
                 </li>
                 <li><a href="register.html">Register</a></li>
                 <li><a href="loginPage.html">Login</a></li>
             </ul>
           </nav>
-           <div class="theme-switch-wrapper">
-  <label class="theme-switch" for="checkbox">
-    <input type="checkbox" id="checkbox" />
-    <span class="slider round"></span>
-  </label>
-  <span id="theme-icon">☀️</span>
-</div>
-</div>
+            
+      </div>
+
 
     <div class="interview-container">
         <h2 class="form-heading">Prepare for Your Interview</h2>
         <p class="form-subtext">Provide details about your desired job role and upload your resume to get started.</p>
     
-        <form class="interview-form" action="#" method="post">
+        <form class="interview-form" >
             <label for="job-role"> 
                 <span>Job Role/Job Position:</span><br>
-                <input type="text" id="job-role" required>
+                <label for="job-role">
+                  <select name="job" id="job-role" required>
+                    <option value="" disabled selected>Select a job role</option>
+                    <option value="teaching">Teaching</option>
+                    <option value="hr">HR</option>
+                    <option value="accountant">Accountant</option>
+                    <option value="analyst">Analyst</option>
+                    <option value="hw">Hardware Engineer</option>
+                    <option value="web">Web Developer</option>
+                    <option value="mangt">Management</option>
+                  </select>
+                </label>
             </label>
     
             <label for="yearOfExp"> 
@@ -70,58 +71,28 @@
                 <input type="text" id="job_desc" required>
             </label>
     
-           
+            <!-- <label for="resume_upload"> 
+                <span>Upload Your Resume:</span><br>
+                <input type="file" id="resume_upload" required>
+            </label> -->
     
             <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
-    
+    <div class="theme-switch-wrapper">
+  <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <span class="slider round"></span>
+  </label>
+  <span id="theme-icon">☀</span>
+</div>
     
     <footer>
         <div> <span><a href="aboutUs.html">About us</a></span>|<span><a href="contactUs.html">Contact us</a></span>|<span><a href="policies.html">Policies</a></span></div>
         <p>&copy; 2025 Copyright SmartEU-Prep
             All rights are reserved. </p>
     </footer>
- <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navList = document.querySelector('.nav-listItems');
+    <script src="../JS/mock_interview.js"></script>
 
-  hamburger.addEventListener('click', () => {
-    navList.classList.toggle('show');
-  });
-
-         
-  const checkbox = document.getElementById("checkbox");
-  const icon = document.getElementById("theme-icon");
-
-  checkbox.addEventListener("change", () => {
-    document.body.classList.toggle("dark-theme");
-    icon.textContent = document.body.classList.contains("dark-theme") ? "🌙" : "☀️";
-  });
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const dropdown = document.querySelector('.dropdown > a');
-    const menu = document.querySelector('.dropdown-menu');
-
-    dropdown.addEventListener('click', function (e) {
-      e.preventDefault();
-      menu.classList.toggle('show');
-    });
-  });
-
-
-function dropdown(e) {
-   e.stopPropagation(); // optional: prevents bubbling if needed
-
-  const content = e.currentTarget;
-  const subMenu = content.querySelector('.sub-dropdown-menu');
-  const arrow = content.querySelector('.arrow');
-
-  if (subMenu) {
-    subMenu.classList.toggle('show');
-    arrow.classList.toggle('rotate');
-  }
-}
-</script>
 </body>
 </html>

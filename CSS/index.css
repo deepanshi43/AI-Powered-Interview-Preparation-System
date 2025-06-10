@@ -300,37 +300,6 @@ font-size:large;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .feedback-button{
     margin-top: 70px;
     float: right;
@@ -378,11 +347,6 @@ footer{
 
 
 
-
-
-
-
-    
 
 
 
@@ -587,8 +551,8 @@ input:checked + .slider:before {
     background-image: none !important;
    
 }
-.dark-theme .testimonials-list{
-    color: white;
+.dark-theme .testimonial-box{
+    color: black;
 }
 .dark-theme .testimonial-1 ,.dark-theme .testimonial-2 ,.dark-theme .testimonial-3 ,.dark-theme .testimonial-4{
     color: black;
@@ -620,6 +584,39 @@ input:checked + .slider:before {
 
 .dark-theme footer div span a {
     color: white !important;
+}
+
+/* Container styling */
+.dark-theme #dynamic-testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: black; /* ✅ your desired background */
+}
+
+/* Individual testimonial box styling */
+.dark-theme .testimonial-box {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.dark-theme .testimonial-box:hover {
+  transform: scale(1.03);
+}
+
+/* Paragraphs inside each box */
+.dark-theme .testimonial-box p {
+  margin: 10px 0;
+  font-size: 14px;
 }
 
 
